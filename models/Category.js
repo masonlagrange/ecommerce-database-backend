@@ -1,14 +1,13 @@
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
-const Product = require('./Product.js');
 
 class Category extends Model {}
 
 Category.init(
   {
     id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
@@ -26,5 +25,5 @@ Category.init(
     modelName: 'category',
   }
 );
-Category.HasMany(Product)
+
 module.exports = Category;

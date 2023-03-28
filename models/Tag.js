@@ -7,7 +7,7 @@ class Tag extends Model {}
 Tag.init(
   {
     id: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
@@ -24,5 +24,5 @@ Tag.init(
     modelName: 'tag',
   }
 );
-Tag.belongsToMany(Product)
+
 module.exports = Tag;
